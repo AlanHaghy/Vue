@@ -1,0 +1,101 @@
+@import "../../assets/color.scss";
+
+.ecard {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 500px;
+  margin: 30px;
+  border-radius: 4px;
+  border: 1px solid $border-color;
+  
+
+  .title {
+    background-color: $back-lighBlue;
+    color: $text-color;
+    font-weight: bold;
+    flex-grow: 1;
+    .title-text {
+      display: block;
+      line-height: 60px;
+      font-size: 18px;
+      height: 30%;
+    }
+    .price-tag {
+      color: $card-blue;
+      letter-spacing: -0.05em;
+      font-size: 40px;
+      height: 30%;
+    }
+
+    .refundable {
+    color: $card-blue;
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: -25px;
+    }
+
+    .caption {
+      font-size: 14px;
+      font-weight: 500;
+      text-align: left;
+      padding: 20px;
+    }
+  }
+
+  .context {
+    background-color: $back-white;
+    flex-direction: column;
+    flex-grow: 1;
+    color: $text-color;
+
+    .reqTitle {
+      text-align: left;
+      font-size: 12pt;
+      font-weight: 500;
+      padding: 10px 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      text-align: left;
+      font-size: 10pt;
+      font-weight: 500;
+      padding: 10px 20px;
+    }
+    li {
+      border-bottom: 1px solid $border-color-light;
+      padding: 0.3em 0;
+    }
+
+    li:last-child{
+      border-bottom: none;
+
+    }
+  }
+
+  &.error {
+    border: 1px solid $warning-color;
+  }
+
+  &:hover {
+    border: 1px solid $card-blue;
+    cursor: pointer;
+    @include box-shadow($shadows);
+  }
+
+  &.selected {
+    border: 1px solid $card-blue;
+    cursor: pointer;
+    @include box-shadow($shadows);
+
+    .title {
+      background-color: $card-blue;
+      color: $back-white;
+  }
+  .price-tag , .refundable {
+    color: $back-white;
+  }
+}
+}
+

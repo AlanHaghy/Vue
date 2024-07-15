@@ -1,0 +1,16 @@
+
+$text-color: rgba(0, 0, 0, 0.87);
+$card-blue: rgb(52, 120, 200);
+$back-white: rgb(255,255,255);
+$border-color: rgb(138, 138, 138);
+$border-color-light: rgb(216, 216, 216);
+$back-lighBlue: #f7f9fb;
+$warning-color: rgb(255, 0, 0);
+$shadows: 0px 0px 25px rgb(170, 189, 211), 0px 25px 0px rgb(170, 189, 211) inset;
+
+
+@mixin box-shadow($params) {
+    -webkit-box-shadow: $params;
+    -moz-box-shadow: $params;
+    box-shadow: $params;
+  }
